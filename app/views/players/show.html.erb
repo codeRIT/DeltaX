@@ -1,0 +1,9 @@
+<h1>Players#show</h1>
+<p>Find me in app/views/players/show.html.erb</p>
+Please use API to control game play instead.
+<%= link_to "REJOIN", game_rejoin_path(code: @player.code), remote: true, method: :get  %>
+
+<%= link_to "UP", set_player_path(@player, code: @player.code, y: 1), remote: true, method: :post %>
+<%= link_to "DOWN", set_player_path(@player, code: @player.code, y: -1), remote: true, method: :post %>
+<%= link_to "RIGHT", set_player_path(@player, code: @player.code, x: 1), remote: true, method: :post  %>
+<%= link_to "LEFT", set_player_path(@player, code: @player.code, x: -1), remote: true, method: :post  %>

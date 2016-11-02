@@ -1,24 +1,15 @@
-# README
+## Playing the Game
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* host = “link-to running instance” 
+* Join (GET): host/join (return player json)
+  > Get request to retrieve a player for running game. Utilize this player instance to control game play.
 
-Things you may want to cover:
+* Set name (POST): host/player/set?code=”xYz” [name,]
+  > Set player configurations such as name, x direction, y direction, z direction
+* Rejoin (GET): host/rejoin?code=”xYz” (returns player json)
+  > Rejoin running game instance with player code.
+* Make moves (POST): host/player/set?code=”xYz” [name, x, y, z]
+  > Change the direction of player/ship/object.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### Current State:
+  * Games Available:  1

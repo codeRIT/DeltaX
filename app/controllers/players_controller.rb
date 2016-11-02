@@ -18,6 +18,7 @@ class PlayersController < ApplicationController
       ActionCable.server.broadcast "game_channel", { action: :move, player: player}
       player.save!
     end
+    render json: {}
   end
 
   def validate

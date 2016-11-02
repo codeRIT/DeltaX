@@ -81,6 +81,7 @@ Rails.application.configure do
     config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
   config.web_socket_server_url = ENV["ACTION_CABLE_URI"]
+  config.action_cable.allowed_request_origins = [ 'https://protected-taiga-40563.herokuapp.com', /http:\/\/protected-taiga-40563.herokuapp.com.*/  ]
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end

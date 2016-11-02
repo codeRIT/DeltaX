@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get 'join', to: "game#join"
   get 'rejoin', to: "game#rejoin", as: :game_rejoin
-
+  mount ActionCable.server => '/cable'
   root to: "game#show"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
